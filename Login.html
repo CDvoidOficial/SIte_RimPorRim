@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/Cadastro.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="lado-esquerdo">
+        <h2>Seja bem-vindo de volta!</h2>
+        <p>Não possui uma conta?</p>
+        <button onclick="window.location.href='cadastro.html'">Cadastre-se</button>
+    </div>
+
+    <div class="lado-direito">
+        <form action="Php/login.php" method="POST">
+            <h1>Login</h1>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Senha:</label>
+            <input type="password" name="senha" required>
+            
+            <a href="">Esqueceu a senha?</a>
+            <button type="submit" name="login">Entrar</button>
+        </form>
+        
+    </div>
+
+</div>
+
+</body>
+</html>
