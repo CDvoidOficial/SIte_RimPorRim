@@ -1,0 +1,676 @@
+/* =====================================================
+   GERAL
+   ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #e9dcea;
+  overflow-x: hidden;
+}
+
+
+/* =====================================================
+   NAVBAR (Todas as páginas)
+   ===================================================== */
+.navbar {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px, 20px;
+  border-bottom: 1px solid #ddd;
+  height: 60px;
+}
+
+.navbar .logo {
+  margin-left: 0;
+  display: inline-block;
+  padding: 5px;
+  height: 60px;
+  width: 60px;
+}
+
+.navbar .img_navbar {
+  width: 40px;
+  height: 50px;
+}
+
+.navbar h3 {
+  position: relative;
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  font-family: Droid Sans;
+}
+a {
+  text-decoration: none;
+  color: black;
+  
+}
+.nav-links a {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  justify-content: center;
+  flex: 1;
+}
+
+.img_pessoa {
+  height: 15px;
+  width: 15px;
+}
+
+.botoes a {
+  background-color: #653485;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  margin-left: 7px;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.botoes .entrar {
+  background-color: #653485;
+}
+
+.botoes .cadastrar {
+  background-color: #653485;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Menu padrão (desktop) */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #653485;
+  display: block;
+  border-radius: 2px;
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  padding-right: 30px;
+
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.mobile-menu li {
+  margin: 8px 0;
+}
+.mobile-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .mobile-menu.open { display: flex;}
+ /* .escritaDRC { height: 100%;}
+  .logoIndex {height:100%}*/
+}
+/* =====================================================
+   index.php — Página Inicial
+   ===================================================== */
+/* Estilo padrão (desktop) */
+
+.Meio h1 {
+  font-size: 150px;
+  margin-bottom: 10px;
+  color: #282E34;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.Meio h2 {
+  font-size: 50px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  font-family: 'Berkshire Swash', cursive;
+  color: #282E34;
+}
+
+
+
+.saiba-mais {
+  background-color: #653485;
+  color: white;
+  padding: 15px 25px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 50px;
+  width: 280px;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.tabelaMeio {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabelaMeio th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Mobile: empilhar */
+@media (max-width: 768px) {
+  .tabelaMeio, .tabelaMeio tr, .tabelaMeio th {
+    display: block;
+    width: 100%;
+  }
+
+  .logoIndex {
+    height: auto; /* Ajusta altura no mobile */
+    max-width: 100%;
+  }
+
+  .escritaDRC h1 {
+    font-size: 80px; /* Reduz tamanho no mobile */
+  }
+
+  .escritaDRC h2 {
+    font-size: 30px;
+  }
+}
+/* =====================================================
+   escolha.php — Botões de Escolha de Usuário
+   ===================================================== */
+.btn_infantil {
+  background-color: #FFD6CF;
+  color: black;
+  border: 5px solid #FCA897;
+  height: 500px;
+  width: 300px;
+  border-radius: 30px;
+  padding-top: 200px;
+}
+
+.btn_infantil:hover {
+  background-color: #FCA897;
+  color: white;
+}
+
+.btn_adulto {
+  background-color: #AFCBFF;
+  color: black;
+  border: 5px solid #8AB3FF;
+  height: 500px;
+  width: 300px;
+  border-radius: 30px;
+  padding-top: 200px;
+}
+
+.btn_adulto:hover {
+  background-color: #8AB3FF;
+  color: white;
+}
+
+.btn_profissional {
+  background-color: #8c759c;
+  color: black;
+  border: 5px solid #77568e;
+  height: 500px;
+  width: 300px;
+  border-radius: 30px;
+  padding-top: 200px;
+}
+
+.btn_profissional:hover {
+  background-color: #77568e;
+  color: white;
+}
+
+
+/* =====================================================
+   footer (Todas as páginas)
+   ===================================================== */
+footer {
+  background-color: #e9dcea;
+  padding: 39px 20px 39px 20px;
+  font-family: Droid Sans;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-box.direita {
+  margin-left: 40%;
+}
+
+.footer-box h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+footer.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   pagina_adultos.php
+   ===================================================== */
+.container-geral {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #9ec4ff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 0 20px 20px 0;
+}
+
+.sidebar button {
+  background-color: #dce8ff;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #6faaff;
+}
+
+.sidebar button.active {
+  background-color: #3f7ce6;
+  color: white;
+}
+
+.conteudo {
+  flex: 1;
+  background-color: #cce0ff;
+  padding: 30px;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.conteudo h2 {
+  width: 100%;
+  text-align: center;
+  color: #2f3851;
+  font-family: 'Berkshire Swash', cursive;
+  margin-bottom: 20px;
+}
+
+.item {
+  background-color: #f4f4f4;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.item img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.item p {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   chat.php — Estilo do Chat
+   ===================================================== */
+.caixa-chat {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  margin: 40px auto;
+  background-color: #e5edff;
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mensagem {
+  display: flex;
+  max-width: 70%;
+}
+
+.mensagem.direita {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.mensagem.esquerda {
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+
+.conteudo-mensagem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mensagem.direita .conteudo-mensagem {
+  align-items: flex-end;
+}
+
+.nome {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.nome.profissional {
+  color: #d60000;
+}
+
+.bolha {
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f1f0f0;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.mensagem.direita .bolha {
+  background-color: #cfe3ff;
+}
+
+.form-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-chat input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.form-chat button {
+  background-color: #0047ab;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gAradient(180deg, #dce7fb 80%, #ffffff 100%);
+  min-height: calc(100vh - 60px);
+}
+
+.chat-titulo {
+  font-size: 40px;
+  font-family: 'Berkshire Swash', cursive;
+  margin-bottom: 20px;
+  color: #2f3851;
+  position: relative;
+}
+
+.chat-titulo::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #2f3851;
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
+.btn-excluir {
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 8px; /* mais próximo da borda da bolha */
+  background-color: #e74c3c;
+  color: white;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+.mensagem.show-delete .btn-excluir {
+  display: block;
+}
+
+.conteudo-mensagem {
+  position: relative;
+}
+
+/* =====================================================
+   Allgamestupro.php — Estilo do jogo Crianças
+   ===================================================== */
+
+
+/*Área profissional*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../IMG/outroroxo.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+}
+.navbar {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px, 20px;
+  border-bottom: 1px solid #ddd;
+  height: 60px;
+}
+
+.navbar .logo {
+  margin-left: 0;
+  display: inline-block;
+  padding: 5px;
+  height: 60px;
+  width: 60px;
+}
+
+.navbar .img_navbar {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar h3 {
+  position: relative;
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  font-family: Droid Sans;
+}
+
+.nav-links a {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  justify-content: center;
+  flex: 1;
+}
+.btnpro {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #6a11cb, #2575fc);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+}
+.content{
+    margin-top: 10%;
+    margin-left: 10%;
+    max-width: 600px;
+
+}
+.content h1 {
+    font-size: 70px;
+    color: #333;
+}
+.content p {
+    margin: 10px 0 30px;
+    color: #333;
+}
+.imagem{
+    width: 700px;
+    top: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+  .logo {
+    display: none !important;
+  }
+  #footer {
+    display: none !important;
+  }
+}
